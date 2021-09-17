@@ -1,6 +1,7 @@
 # FairPlayKeyData-Info
 
 FairPlayKeyData es la clave para un activación completa de cualquier dispositivo.
+
 Cuando es generado un FairPlayKeyData durante el llamado al servidor de activación correctamente, este se decodifica en rutas distintas
 
 /private/var/containers/Data/System/com.apple.fairplayd.H2/Documents/Library/FairPlay/iTunes_Control/iTunes/IC-Info.sisv
@@ -11,7 +12,9 @@ Cuando es generado un FairPlayKeyData durante el llamado al servidor de activaci
 
 Pongamos como ejemplo un certificado FairPlayKeyData decodificado en base64:
 
+
 ---------------------------CERTIFICADO CODIFICADO---------------------------
+
 	<key>FairPlayKeyData</key>
 	<data>
 	LS0tLS1CRUdJTiBDT05UQUlORVItLS0tLQpBQUVBQWZkYTltMmdvbWdZMHVlWW1WZ0Y0
@@ -47,12 +50,13 @@ Pongamos como ejemplo un certificado FairPlayKeyData decodificado en base64:
 	dDJEMkZ4cVhsdGpLQXR3L213cm5TOFZQRlZCMkx6Z1lWVkdPdiswCi0tLS0tRU5EIENP
 	TlRBSU5FUi0tLS0tCg==
 	</data>
-------------------------------------------------------------------------------
 
 
 ---------------------------CERTIFICADO DECODIFICADO---------------------------
 
+
 -----BEGIN CONTAINER-----
+
 AAEAAfda9m2gomgY0ueYmVgF4LnkOSLxcCTvYxz6v2IRBKdMFiNs9XuHWc7S+T/A
 ibp3h6McMK0aDLRgwCnU8bhRWRoIxZhZUL0nCp5WP4HKuT2DvPHL6JlPeyz+0e4i
 5BlIiRnW4oCtLhPhUtYDyLmshB5ru5qHzpmEqhDlSvJHBaKBcL2Jpw0M3CUjCym9
@@ -77,12 +81,15 @@ rYhDZfKNwBIwT8KNpxspCnK0PwyydN4bui/4j5yWIxgKAi8KjazZhGSj6Cxk+lPD
 CuwornnxiWKCZJq7xEu66PZyhvSW4+QevSU3LSGJKwN6dJsby+82trWZgdGqeLFB
 MObll2oHFx5hkf9AIYmVtLXNddz6kc63kbFytpJWtwI6sCh7TEZT7LdngdLP0P5g
 +VMnNRXFst2D2FxqXltjKAtw/mwrnS8VPFVB2LzgYVVGOv+0
+
 -----END CONTAINER-----
 
-------------------------------------------------------------------------------
+
 
 Vamos a eliminar las llaves => -----BEGING CERTIFICATE----- & -----END CERTIFICATE-----
+
 Generando así solo el contenido del certificado:
+
 
 AAEAAfda9m2gomgY0ueYmVgF4LnkOSLxcCTvYxz6v2IRBKdMFiNs9XuHWc7S+T/A
 ibp3h6McMK0aDLRgwCnU8bhRWRoIxZhZUL0nCp5WP4HKuT2DvPHL6JlPeyz+0e4i
@@ -108,10 +115,13 @@ rYhDZfKNwBIwT8KNpxspCnK0PwyydN4bui/4j5yWIxgKAi8KjazZhGSj6Cxk+lPD
 CuwornnxiWKCZJq7xEu66PZyhvSW4+QevSU3LSGJKwN6dJsby+82trWZgdGqeLFB
 MObll2oHFx5hkf9AIYmVtLXNddz6kc63kbFytpJWtwI6sCh7TEZT7LdngdLP0P5g
 +VMnNRXFst2D2FxqXltjKAtw/mwrnS8VPFVB2LzgYVVGOv+0
+
 
 Finalmente decodificamos este certificado, obteniendo así => IC-Info.sisv & IC-Info.sidv
 
+
 ---------------------------IC-Info/sisv/sidv---------------------------
+
   ÷Zöm ¢hҧX๤9"񰤯cú¿b§L#lõ{YΒù?Àºw£0­´`À)Ա¸QYŘYP½'
 V?ʹ=¼񋨙O{,þѮ"䙈֢­.ᒖȹ¬k»Ιª劲G¢p½§
 ܥ#)½㞿ö򤣾a­i݌MK_§U3򄦛՚c£ж/𲳺哋j¶ꒇ½-¯ڙz¬½j{ԅ"$þ,¸§g§hX¾tõݖ zࡵ>Ԍ¹7¶>ĺI¨Á0z$˿AP¥+Ո;KÆÿv`AZ幦׽×7쥏`DG濯vøMµýAoϿ%/Ȭmü³B¦/o¡$W£zo]û玘¸6JԼޗ%aӆú¯萡넨¥±tøθa\5¥͏«К6%aNY都X¬+ѹüA+òüC¥©ýKeݛnH&՞¢6󓍘͢8AA]Ì<uRi卢˥_4◊ժyøΞ̿±o¿ þ&ˑúڦi7^ö-;­f$0ܐ泌ؠzª<!ÁFz},6"-,öW¬±{Ǣq?·eL¸25ºU	·³"Z¶¿þ갑»fKٯ.4﵇ ¥LƙSUĠª㻂퇯vr(@,(එ,E¦M2ˢ訮=4ϔIge𣱅3¢St1뿟祆÷[s)ÙøзɝɕeUv䬨º��'þ6ºkÀü湴»®)֧PµBO蟱ɖڡPh\¢밧ü²¥ŭ©tncMZ «Ɵò譥`÷ö%ü¸2F��Lz`¿>}hm¿c:Ĕ*iP½nEDì܄N畭=ʗ[tq&¬پ¨׏¢꥕Dً狴쁺½ùϷ·;D̍ͅ"Wl³T矝溒²밑ꦶVXݥ񆟯)\/￳@+zõ^ֽ₰üԙUIø¡]|v؊V®(jfٿ·K¾©µH5¼탃,(5ü'/蔩ʳ؃롈J3bõC5	ʖ֨̧��Ө­Ce򍀒0O§)
